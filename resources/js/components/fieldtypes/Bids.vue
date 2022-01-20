@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="bids-fieldtype-container">
         <text-input :value="value" @input="update" />
     </div>
 
