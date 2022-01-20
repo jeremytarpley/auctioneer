@@ -1,0 +1,61 @@
+title: Product
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          listable: hidden
+          display: Description
+      -
+        handle: bidsarray
+        field:
+          mode: keyed
+          keys:
+            timestamp: 'Time Stamp'
+            user: User
+            bid: Bid
+          display: BidsArray
+          type: array
+          icon: array
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: price
+        field:
+          read_only: false
+          type: text
+          listable: hidden
+          display: Price
+          instructions_position: above
+          input_type: number
+          antlers: false
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required

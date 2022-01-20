@@ -1,0 +1,10 @@
+title: Products
+template: default
+layout: layout
+revisions: false
+route: '/products/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: private
+  future: private
